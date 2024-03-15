@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(WaitFor3SecondsAndLoadMenu());
         }
 
-        if (Keyboard.current.escapeKey.wasPressedThisFrame) {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.qKey.wasPressedThisFrame) {
             SceneManagerHelper.Instance.LoadVictoryScene("You have quit the game!");
             timerIsRunning = false;
             gameHasStarted = false;
@@ -181,7 +181,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time has run out!");
                 GameTimer.Instance.timeRemaining = 0;
                 timerIsRunning = false;
             }

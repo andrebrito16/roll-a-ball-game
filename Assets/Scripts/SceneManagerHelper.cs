@@ -5,7 +5,7 @@ public class SceneManagerHelper : MonoBehaviour
 {
     public static SceneManagerHelper Instance;
 
-    public string victoryMessage; // Variable to hold the victory message
+    public string victoryMessage;
 
     private void Awake()
     {
@@ -23,10 +23,10 @@ public class SceneManagerHelper : MonoBehaviour
     public void LoadVictoryScene(string message)
     {
         victoryMessage = message;
-        SceneManager.LoadScene("Menu"); // Replace "VictoryScene" with the name of your victory scene
+        SceneManager.LoadScene("Menu");
     }
 
     public void StartGame() {
-        SceneManager.LoadScene("Minigame"); // Replace "Game" with the name of your game scene
+        SceneManager.LoadScene("Minigame");
     }
 }

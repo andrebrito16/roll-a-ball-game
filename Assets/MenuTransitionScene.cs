@@ -22,22 +22,18 @@ public class MenuTransitionScene : MonoBehaviour
             case MenuController.ButtonType.Play:
                 {
                     SceneManagerHelper.Instance.StartGame();
-                    Debug.Log("Game has started!");
                 }
                 break;
             case MenuController.ButtonType.Options:
-                Debug.Log("Options button was clicked!");
-                // Handle options logic
                 break;
             case MenuController.ButtonType.Restart:
                 break;
             case MenuController.ButtonType.Exit:
-                // Close the game
                 Application.Quit();
                 break;
         }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
 
